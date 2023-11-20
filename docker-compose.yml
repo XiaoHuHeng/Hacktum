@@ -4,6 +4,8 @@ services:
   frontend:
     build: ./hacktum-check24-frontend
     env_file: ./.env
+    environment:
+      - REACT_PORT=$REACT_CONTAINER_PORT
     ports:
       - $REACT_HOST_PORT:$REACT_CONTAINER_PORT
     depends_on:
